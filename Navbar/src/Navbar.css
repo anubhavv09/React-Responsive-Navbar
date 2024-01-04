@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  height: 40px;
+  background-color: black;
+  position: relative;
+}
+
+.logo {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ham-burger-icon {
+  display: none;
+  color: white;
+}
+
+.container {
+  max-width: 1100px;
+  border: 1px solid white;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.show-list ul {
+  display: flex;
+  list-style: none;
+}
+
+li {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul :not(:last-child) {
+  margin-right: 30px;
+}
+
+@media (max-width: 600px) {
+  .ham-burger-icon {
+    display: block;
+  }
+
+  .show-list.active {
+    display: none;
+  }
+
+  .show-list {
+    background-color: black;
+    top: 40px;
+    height: 300px;
+    width: 100px;
+    position: absolute;
+    right: 0;
+  }
+
+  .show-list ul {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    padding: 0 15px;
+  }
+
+  li {
+    color: white;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+  }
+}
